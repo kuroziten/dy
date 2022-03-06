@@ -33,7 +33,7 @@ window.setInterval(() => {
     body.innerText = "";
     body.style.backgroundSize = "cover";
     body.appendChild(iframe);
-    // 動画ロード後に要素のサイズを変更する
+    /* 動画ロード後に要素のサイズを変更する */
     setTimeout(() => {
       body.style.width = "";
       body.style.height = "";
