@@ -7,14 +7,14 @@ window.setInterval(() => {
   const bodies = document.querySelectorAll(".body");
   const youTubeURLs = ["https://www.youtube.com/watch?v=", "https://youtu.be/","https://youtube.com/shorts/"];
   const nicoVideoURLs = ["https://www.nicovideo.jp/watch/", "https://nico.ms/"];
-  // 複数のpatternのどれかを含むか確認する関数
+  /* 複数のpatternのどれかを含むか確認する関数 */
   const includes = (text, patterns) =>
     patterns.some((pattern) => text.includes(pattern));
-  // 複数のpatternを削除する関数
+  /* 複数のpatternを削除する関数 */
   const removePatterns = (text, patterns) =>
     patterns.reduce((text, pattern) => text.replace(pattern, ""), text);
-  // テキストを埋め込みURLに変換する関数
-  // 変換できないテキストが渡されたときはundefinedを返す
+  /* テキストを埋め込みURLに変換する関数 */
+  /* 変換できないテキストが渡されたときはundefinedを返す */
   const toEmbeddedURL = (text) =>
     includes(text, youTubeURLs)
       ? "https://www.youtube.com/embed/" + removePatterns(text, youTubeURLs)
