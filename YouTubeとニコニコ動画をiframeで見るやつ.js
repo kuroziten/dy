@@ -37,9 +37,9 @@ window.setInterval(() => {
     setTimeout(() => {
       body.style.width = "";
       body.style.height = "";
-    }, 1000);
+    }, 500);
   }
-}, 1000);
+}, 500);
 
 // bookmarklet
-// javascript:window.setInterval(()=>{const t=document.querySelectorAll(".body"),e=["https://www.youtube.com/watch?v=","https://youtu.be/"],o=["https://www.nicovideo.jp/watch/","https://nico.ms/"],i=(t,e)=>e.some(e=>t.includes(e)),n=(t,e)=>e.reduce((t,e)=>t.replace(e,""),t),c=t=>i(t,e)?"https://www.youtube.com/embed/"+n(t,e):i(t,o)?"https://embed.nicovideo.jp/watch/"+n(t,o):void 0,s=navigator.userAgent.match(/iPhone|Android.+Mobile/);for(const e of t){const t=c(e.innerText);if(!t)continue;const o=document.createElement("iframe");o.setAttribute("width",s?"200":"440"),o.setAttribute("height",s?"112.5":"247.5"),o.setAttribute("src",t),e.innerText="",e.style.backgroundSize="cover",e.appendChild(o),setTimeout(()=>{e.style.width="",e.style.height=""},1e3)}},1e3);
+// javascript:window.setInterval(()=>{const t=document.querySelectorAll(".body"),e=["https://www.youtube.com/watch?v=","https://youtu.be/"],o=["https://www.nicovideo.jp/watch/","https://nico.ms/"],i=(t,e)=>e.some(e=>t.includes(e)),n=(t,e)=>e.reduce((t,e)=>t.replace(e,""),t),c=t=>i(t,e)?"https://www.youtube.com/embed/"+n(t,e):i(t,o)?"https://embed.nicovideo.jp/watch/"+n(t,o):void 0,s=navigator.userAgent.match(/iPhone|Android.+Mobile/);for(const e of t){const t=c(e.innerText);if(!t)continue;const o=document.createElement("iframe");o.setAttribute("width",s?"200":"440"),o.setAttribute("height",s?"112.5":"247.5"),o.setAttribute("src",t),e.innerText="",e.style.backgroundSize="cover",e.appendChild(o),setTimeout(()=>{e.style.width="",e.style.height=""},500)}},500);
