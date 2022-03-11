@@ -35,8 +35,6 @@ const drrrjit_observer = new MutationObserver((mutations) => {
       body.innerText = "";
       body.style.backgroundSize = "cover";
       body.appendChild(iframe);
-      body.style.width = "";
-      body.style.height = "";
       /* 動画ロード後に要素のサイズを変更する */
       setTimeout(() => {
         body.style.width = "";
