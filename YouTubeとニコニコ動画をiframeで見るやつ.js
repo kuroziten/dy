@@ -3,6 +3,8 @@
  * 作成者：国語辞典、NOT
  * 改修者：noname
  */
+const drrrkot_observer = new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
 window.setInterval(() => {
   const bodies = document.querySelectorAll(".body");
   const youTubeURLs = ["https://www.youtube.com/watch?v=", "https://youtu.be/","https://youtube.com/shorts/", "https://m.youtube.com/watch?v="];
@@ -40,6 +42,12 @@ window.setInterval(() => {
     }, 500);
   }
 }, 500);
+});
+});
+const config = {childList:true,subtree:true};
+drrrkot_observer.observe(document.body, config);
+
+
 
 // bookmarklet
 // javascript:window.setInterval(()=>{const t=document.querySelectorAll(".body"),e=["https://www.youtube.com/watch?v=","https://youtu.be/","https://youtube.com/shorts/"],o=["https://www.nicovideo.jp/watch/","https://nico.ms/"],i=(t,e)=>e.some(e=>t.includes(e)),s=(t,e)=>e.reduce((t,e)=>t.replace(e,""),t),c=t=>i(t,e)?"https://www.youtube.com/embed/"+s(t,e):i(t,o)?"https://embed.nicovideo.jp/watch/"+s(t,o):void 0,n=navigator.userAgent.match(/iPhone|Android.+Mobile/);for(const e of t){const t=c(e.innerText);if(!t)continue;const o=document.createElement("iframe");o.setAttribute("width",n?"200":"440"),o.setAttribute("height",n?"112.5":"247.5"),o.setAttribute("src",t),e.innerText="",e.style.backgroundSize="cover",e.appendChild(o),setTimeout(()=>{e.style.width="",e.style.height=""},500)}},500);
