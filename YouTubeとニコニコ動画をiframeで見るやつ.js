@@ -45,8 +45,8 @@ const drrrjit_observer = new MutationObserver((mutations) => {
     }
   });
 });
-const config = {childList:true,subtree:true};
-drrrjit_observer.observe(document.body, config);
+const configjit = {childList:true,subtree:true};
+drrrjit_observer.observe(document.body, configjit);
 
 
 
