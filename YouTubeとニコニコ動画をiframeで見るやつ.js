@@ -11,6 +11,7 @@ const ytbFunction = () => {
               , "https://www.youtube.com/watch?&v="
               , "https://youtu.be/"
               , "https://www.youtube.com/watch?app=desktop&v="
+              , "https://www.youtube.com/watch? app=desktop&v="
               , "https://m.youtube.com/watch?v="
               
         ];
