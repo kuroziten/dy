@@ -5,7 +5,7 @@
  */
 window.setInterval(() => {
   const bodies = document.querySelectorAll(".body");
-  const youTubeURLs = ["https://www.youtube.com/watch?v=", "https://youtu.be/","https://youtube.com/shorts/"];
+  const youTubeURLs = ["https://www.youtube.com/watch?v=", "https://youtu.be/","https://youtube.com/shorts/", "https://m.youtube.com/watch?v="];
   const nicoVideoURLs = ["https://www.nicovideo.jp/watch/", "https://nico.ms/"];
   /* 複数のpatternのどれかを含むか確認する関数 */
   const includes = (text, patterns) =>
