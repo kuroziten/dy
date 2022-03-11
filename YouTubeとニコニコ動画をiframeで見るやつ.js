@@ -41,7 +41,7 @@ const drrrjit_observer = new MutationObserver((mutations) => {
       setTimeout(() => {
         body.style.width = "";
         body.style.height = "";
-      }, 250);
+      }, 500);
     }
   });
 });
